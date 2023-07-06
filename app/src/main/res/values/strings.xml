@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Compose_example</string>
+    <string name="splash_title">Get Your Pet</string>
+    <string name="splash_sub_title">Take care of your\n adopt pet</string>
+    <string name="first_page_title">Welcome to our app</string>
+    <string name="second_page_title">Make a new friend</string>
+    <string name="third_page_title">Find your favorite pet close to you</string>
+    <string name="first_page_sub_title">with our app you\'ll make life of our funny friends happier</string>
+    <string name="second_page_sub_title">Here you can meet your dream friends and enjoy with them</string>
+    <string name="third_page_sub_title">Join and discover your favorite pet in your locality</string>
+    <string name="skip_text"><u>SKIP</u></string>
+    <string name="get_started_text">Get Started</string>
+</resources>

@@ -1,0 +1,114 @@
+[
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.compose_example.app-main-7:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.example.compose_example.app-pngs-0:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.compose_example.app-main-7:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.compose_example.app-main-7:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.compose_example.app-main-7:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.compose_example.app-main-7:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.compose_example.app-main-7:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.compose_example.app-main-7:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/font_poppins_bold.ttf.flat",
+        "source": "com.example.compose_example.app-main-7:/font/poppins_bold.ttf"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/font_poppins_medium.ttf.flat",
+        "source": "com.example.compose_example.app-main-7:/font/poppins_medium.ttf"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/drawable-mdpi_splash_image.png.flat",
+        "source": "com.example.compose_example.app-main-7:/drawable-mdpi/splash_image.png"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.compose_example.app-main-7:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/xml_backup_rules.xml.flat",
+        "source": "com.example.compose_example.app-main-7:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/drawable-xhdpi_splash_image.png.flat",
+        "source": "com.example.compose_example.app-main-7:/drawable-xhdpi/splash_image.png"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.compose_example.app-main-7:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/drawable_pager_first_image.webp.flat",
+        "source": "com.example.compose_example.app-main-7:/drawable/pager_first_image.webp"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.compose_example.app-main-7:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.compose_example.app-main-7:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/drawable_pager_third_image.png.flat",
+        "source": "com.example.compose_example.app-main-7:/drawable/pager_third_image.png"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/drawable-xxxhdpi_splash_image.png.flat",
+        "source": "com.example.compose_example.app-main-7:/drawable-xxxhdpi/splash_image.png"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.compose_example.app-main-7:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.compose_example.app-main-7:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/drawable-hdpi_splash_image.png.flat",
+        "source": "com.example.compose_example.app-main-7:/drawable-hdpi/splash_image.png"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/font_poppins_regular.ttf.flat",
+        "source": "com.example.compose_example.app-main-7:/font/poppins_regular.ttf"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/drawable_pager_second_image.png.flat",
+        "source": "com.example.compose_example.app-main-7:/drawable/pager_second_image.png"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.compose_example.app-main-7:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/drawable-xxhdpi_splash_image.png.flat",
+        "source": "com.example.compose_example.app-main-7:/drawable-xxhdpi/splash_image.png"
+    },
+    {
+        "merged": "com.example.compose_example.app-merged_res-5:/drawable_ic_rounded_background.xml.flat",
+        "source": "com.example.compose_example.app-main-7:/drawable/ic_rounded_background.xml"
+    }
+]
