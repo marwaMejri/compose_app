@@ -45,5 +45,6 @@
     <string name="cat_text">Cat</string>
     <string name="fish_text">Fish</string>
     <string name="chick_text">Chick</string>
+    <string name="distance_text">Distance(%sKm)</string>
 
 </resources>

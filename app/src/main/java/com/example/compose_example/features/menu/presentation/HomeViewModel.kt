@@ -19,6 +19,11 @@ class HomeViewModel : ViewModel() {
                 is HomeEvents.OnCategoryClicked -> {
                     currentState.copy(clickedCategoryIndex = event.value)
                 }
+                is HomeEvents.AddToFavorite -> {
+                    val updatedFavoriteList = ArrayList(currentState.favoriteList)
+                    updatedFavoriteList.add(event.item)
+                    currentState.copy(favoriteList = updatedFavoriteList)
+                }
             }
         }
 

@@ -1,8 +1,11 @@
 package com.example.compose_example.features.menu.presentation.widgets.home
 
-import androidx.compose.animation.*
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.core.FastOutLinearInEasing
 import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.scaleIn
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -53,7 +56,7 @@ fun HomeAnimalCategoryWidget(
     ) {
         itemsIndexed(list) { index, item ->
             var visible by remember { mutableStateOf(false) }
-            val delay = (index + 1) * 500
+            val delay = (index + 1) * 300
             LaunchedEffect(visible) {
                 delay(delay.toLong())
                 visible = true
@@ -104,9 +107,10 @@ private fun CategoryItem(
         contentAlignment = Alignment.Center,
     ) {
         Column(
-            modifier = Modifier.padding(
-                vertical = if (isSelected) 10.dp else 7.dp,
-            ),
+            modifier = Modifier
+                .padding(
+                    vertical = 10.dp,
+                ),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,
         ) {
@@ -114,8 +118,8 @@ private fun CategoryItem(
                 painter = painterResource(item.image),
                 contentDescription = null,
                 modifier = Modifier
-                    .size(if (isSelected) 50.dp else 45.dp)
                     .clip(CircleShape)
+                    .size(50.dp)
                     .border(
                         1.dp,
                         colorResource(id = if (isSelected) R.color.white else R.color.dark_red),
@@ -125,8 +129,7 @@ private fun CategoryItem(
                         colorResource(id = R.color.white)
                     ),
                 contentScale = ContentScale.Crop,
-
-                )
+            )
             Text(
                 stringResource(id = item.title), style = subTitleTextStyle.copy(
                     color = if (isSelected) Color.White else Color.Gray,

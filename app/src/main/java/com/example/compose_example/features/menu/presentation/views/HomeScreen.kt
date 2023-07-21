@@ -2,10 +2,9 @@ package com.example.compose_example.features.menu.presentation.views
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.spring
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -23,6 +22,7 @@ import com.example.compose_example.features.menu.data.home.AnimalCategory
 import com.example.compose_example.features.menu.data.home.HomeState
 import com.example.compose_example.features.menu.presentation.HomeEvents
 import com.example.compose_example.features.menu.presentation.widgets.home.HomeAnimalCategoryWidget
+import com.example.compose_example.features.menu.presentation.widgets.home.HomeAnimalsList
 import com.example.compose_example.features.menu.presentation.widgets.home.HomeCommunityWidget
 import com.example.compose_example.features.menu.presentation.widgets.home.HomeHeaderWidget
 
@@ -48,43 +48,61 @@ fun HomeScreen(
 
 @Composable
 fun HomeConstraints(viewState: HomeState, events: (event: HomeEvents) -> Unit) {
-    ConstraintLayout(modifier = Modifier.fillMaxSize()) {
-        val (topHeader, homeTitle, communityCard, category) = createRefs()
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+    ) {
         HomeHeaderWidget(
             modifier = Modifier
-                .constrainAs(topHeader) {
-                    top.linkTo(parent.top)
-                    start.linkTo(parent.start)
-                    end.linkTo(parent.end)
-                },
+                .fillMaxWidth()
         )
-        HomeTitleWidget(
+        ConstraintLayout(
             modifier = Modifier
-                .constrainAs(homeTitle) {
-                    top.linkTo(topHeader.bottom)
-                    start.linkTo(parent.start)
-                },
-            viewState
-        )
-        HomeCommunityWidget(
-            modifier = Modifier
-                .constrainAs(communityCard) {
-                    top.linkTo(homeTitle.bottom)
-                    start.linkTo(parent.start)
-                    end.linkTo(parent.end)
-                },
-        )
-        HomeAnimalCategoryWidget(
-            modifier = Modifier
-                .constrainAs(category) {
-                    top.linkTo(communityCard.bottom)
-                    start.linkTo(parent.start)
-                    end.linkTo(parent.end)
-                },
-            viewState = viewState,
-            events = events
-        )
+                .verticalScroll(rememberScrollState())
+        ) {
+            val (homeTitle, communityCard, category, animalsList) = createRefs()
 
+            HomeTitleWidget(
+                modifier = Modifier
+                    .constrainAs(homeTitle) {
+                        top.linkTo(parent.top)
+                        start.linkTo(parent.start)
+                    },
+                viewState
+            )
+
+            HomeCommunityWidget(
+                modifier = Modifier
+                    .constrainAs(communityCard) {
+                        top.linkTo(homeTitle.bottom)
+                        start.linkTo(parent.start)
+                        end.linkTo(parent.end)
+                    },
+            )
+
+            HomeAnimalCategoryWidget(
+                modifier = Modifier
+                    .constrainAs(category) {
+                        top.linkTo(communityCard.bottom)
+                        start.linkTo(parent.start)
+                        end.linkTo(parent.end)
+                    },
+                viewState = viewState,
+                events = events
+            )
+
+            HomeAnimalsList(
+                viewState,
+                events,
+                modifier = Modifier
+                    .constrainAs(animalsList) {
+                        top.linkTo(category.bottom)
+                        start.linkTo(parent.start)
+                        end.linkTo(parent.end)
+                        bottom.linkTo(parent.bottom)
+                    },
+            )
+        }
     }
 }
 
