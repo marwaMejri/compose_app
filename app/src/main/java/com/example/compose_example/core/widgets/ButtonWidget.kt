@@ -1,5 +1,7 @@
 package com.example.compose_example.core.widgets
 
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
@@ -22,14 +24,16 @@ fun RoundedButton(
     textStyle: TextStyle = subTitleTextStyle,
 ) {
     Button(
-        onClick = onClick,
-        modifier = modifier,
-        shape = RoundedCornerShape(8.dp),
+        onClick = {
+            onClick()
+        },
+        modifier = modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(15.dp),
         colors = ButtonDefaults.buttonColors(backgroundColor = colorResource(id = R.color.dark_red))
-
     ) {
         Text(
             buttonText, style = textStyle, textAlign = TextAlign.Center,
+            modifier = Modifier.padding(5.dp),
         )
     }
 }

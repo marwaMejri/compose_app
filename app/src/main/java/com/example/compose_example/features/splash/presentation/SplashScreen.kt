@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -20,8 +21,8 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import com.example.compose_example.R
 import com.example.compose_example.core.utils.subTitleTextStyle
 import com.example.compose_example.core.utils.titleTextStyle
+import com.example.compose_example.core.widgets.CustomCircularProgressBar
 import kotlinx.coroutines.delay
-
 @Composable
 fun SplashScreen(
     toOnboardingScreen: () -> Unit,
@@ -80,15 +81,7 @@ fun ScreenConstraints() {
     }
 }
 
-@Composable
-private fun CustomCircularProgressBar(modifier: Modifier = Modifier) {
-    CircularProgressIndicator(
-        modifier = modifier.size(50.dp),
-        color = colorResource(id = R.color.white_bg),
-        strokeWidth = 3.dp
-    )
 
-}
 
 @Composable
 fun CentredImage(modifier: Modifier = Modifier) {
