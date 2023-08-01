@@ -13,6 +13,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.compose_example.core.navigation.GraphDestinations
+import com.example.compose_example.features.menu.presentation.route.FavoriteRoute
 import com.example.compose_example.features.menu.presentation.route.HomeRoute
 import com.example.compose_example.features.menu.utils.BottomBarItem
 
@@ -27,19 +28,6 @@ fun MenuNavGraph(navController: NavHostController) {
         composable(route = BottomBarItem.Home.route) {
             HomeRoute()
         }
-        composable(route = BottomBarItem.Favorite.route) {
-            Box(
-                modifier = Modifier.fillMaxSize(),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    modifier = Modifier.clickable {},
-                    text = "namee",
-                    fontSize = MaterialTheme.typography.h3.fontSize,
-                    fontWeight = FontWeight.Bold
-                )
-            }
-        }
         composable(route = BottomBarItem.Account.route) {
             Box(
                 modifier = Modifier.fillMaxSize(),
@@ -52,6 +40,9 @@ fun MenuNavGraph(navController: NavHostController) {
                     fontWeight = FontWeight.Bold
                 )
             }
+        }
+        composable(route = BottomBarItem.Favorite.route) {
+            FavoriteRoute()
         }
         composable(route = BottomBarItem.Settings.route) {
             Box(

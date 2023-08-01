@@ -42,8 +42,8 @@ fun HomeAnimalCategoryWidget(
     viewState: HomeState
 ) {
     val list = listOf(
-        AnimalCategoryItem.Dog,
         AnimalCategoryItem.Cat,
+        AnimalCategoryItem.Dog,
         AnimalCategoryItem.Chick,
         AnimalCategoryItem.Fish,
     )

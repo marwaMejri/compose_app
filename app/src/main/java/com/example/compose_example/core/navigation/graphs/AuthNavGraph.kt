@@ -21,7 +21,11 @@ fun NavGraphBuilder.authNavGraph(navController: NavHostController) {
                     navController.navigate(AuthScreen.Forgot.route)
                 },
                 navigateToHome = {
-                    navController.navigate(GraphDestinations.MENU_ROUTE)
+                    navController.navigate(GraphDestinations.MENU_ROUTE) {
+                        popUpTo(GraphDestinations.AUTHENTICATION_ROUTE) {
+                            inclusive = true
+                        }
+                    }
                 }
             )
         }

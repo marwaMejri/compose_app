@@ -56,8 +56,8 @@ fun BottomNavNoAnimation(
 ) {
     val screens = listOf(
         BottomBarItem.Home,
-        BottomBarItem.Favorite,
         BottomBarItem.Account,
+        BottomBarItem.Favorite,
         BottomBarItem.Settings,
     )
     val navBackStackEntry by navController.currentBackStackEntryAsState()

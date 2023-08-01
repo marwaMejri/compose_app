@@ -3,18 +3,15 @@ package com.example.compose_example.features.splash.presentation
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
@@ -23,6 +20,7 @@ import com.example.compose_example.core.utils.subTitleTextStyle
 import com.example.compose_example.core.utils.titleTextStyle
 import com.example.compose_example.core.widgets.CustomCircularProgressBar
 import kotlinx.coroutines.delay
+
 @Composable
 fun SplashScreen(
     toOnboardingScreen: () -> Unit,
@@ -82,7 +80,6 @@ fun ScreenConstraints() {
 }
 
 
-
 @Composable
 fun CentredImage(modifier: Modifier = Modifier) {
     Image(
@@ -115,16 +112,3 @@ fun TopTextsColumn(modifier: Modifier = Modifier) {
     }
 }
 
-@Preview
-@Composable
-fun PreviewScreen() {
-    Scaffold {
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(colorResource(R.color.light_pink))
-        ) {
-            ScreenConstraints()
-        }
-    }
-}

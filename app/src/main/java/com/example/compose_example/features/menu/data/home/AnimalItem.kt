@@ -4,15 +4,14 @@ data class AnimalItem(
     val name: String,
     val distance: Double,
     val image: Int,
-    val isFavorite: Boolean,
-//    val location: String,
-//    val sex: Sex,
-//    val age: Int,
-//    val weight: Double,
-//    val description: String,
-//    val category: AnimalCategory,
-//    val owner: Owner,
-//    val size: AnimalSize,
+    val location: String,
+    val sex: Sex,
+    val age: Int,
+    val weight: Double,
+    val description: String,
+    val category: AnimalCategory,
+    val owner: Owner,
+    val size: AnimalSize,
 )
 
 data class Owner(

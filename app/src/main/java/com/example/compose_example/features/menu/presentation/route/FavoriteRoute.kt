@@ -5,11 +5,12 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.compose_example.features.menu.presentation.HomeViewModel
-import com.example.compose_example.features.menu.presentation.views.HomeScreen
+import com.example.compose_example.features.menu.presentation.views.FavoriteScreen
+
 
 @Composable
-fun HomeRoute() {
+fun FavoriteRoute() {
     val viewModel: HomeViewModel = hiltViewModel()
     val state by viewModel.uiState.collectAsState()
-    HomeScreen(state,viewModel::handleHomeEvent)
+    FavoriteScreen(state, viewModel::handleHomeEvent)
 }

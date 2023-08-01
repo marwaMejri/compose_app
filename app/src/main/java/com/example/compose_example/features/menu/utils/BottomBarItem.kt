@@ -16,14 +16,14 @@ sealed class BottomBarItem(
         inactiveIcon = R.drawable.ic_home
     )
 
-    object Favorite : BottomBarItem(
+    object Account : BottomBarItem(
         route = "ACCOUNT",
         title = "Account",
         activeIcon = R.drawable.ic_user_filled,
         inactiveIcon = R.drawable.ic_user,
     )
 
-    object Account : BottomBarItem(
+    object Favorite : BottomBarItem(
         route = "FAVORITE",
         title = "Favorites",
         activeIcon = R.drawable.ic_favorite_filled,

@@ -8,6 +8,8 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
@@ -15,6 +17,10 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
+import com.airbnb.lottie.compose.LottieAnimation
+import com.airbnb.lottie.compose.LottieCompositionSpec
+import com.airbnb.lottie.compose.animateLottieCompositionAsState
+import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.compose_example.R
 import com.example.compose_example.core.utils.subTitleTextStyle
 import com.example.compose_example.core.utils.titleTextStyle
@@ -32,10 +38,14 @@ fun HomeScreen(
     viewState: HomeState,
     events: (event: HomeEvents) -> Unit,
 ) {
+    LaunchedEffect(Unit) {
+        events(HomeEvents.InitAnimalsList)
+    }
     DisposableEffect(Unit) {
         onDispose {
             events(HomeEvents.ToggleAnimation(false))
-            events(HomeEvents.OnCategoryClicked(0, AnimalCategory.DOG))
+            events(HomeEvents.ResetFavoriteAnimationValue)
+            events(HomeEvents.OnCategoryClicked(0, AnimalCategory.CAT))
         }
     }
     Box(
@@ -70,7 +80,6 @@ fun HomeConstraints(viewState: HomeState, events: (event: HomeEvents) -> Unit) {
                     },
                 viewState
             )
-
             HomeCommunityWidget(
                 modifier = Modifier
                     .constrainAs(communityCard) {
@@ -102,9 +111,11 @@ fun HomeConstraints(viewState: HomeState, events: (event: HomeEvents) -> Unit) {
                         bottom.linkTo(parent.bottom)
                     },
             )
+
         }
     }
 }
+
 
 @Composable
 private fun HomeTitleWidget(
